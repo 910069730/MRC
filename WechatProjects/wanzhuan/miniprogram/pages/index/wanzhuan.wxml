@@ -1,0 +1,43 @@
+<view id="app">
+    <view class="all" style="font-family: PingFang-SC-Regular" id="all">
+
+    <!-- <text  class="fanhuia"><image src="../assets/fanhui.png" alt="" class="fanhui"/></text> -->
+     <view class="title">登录</view>
+     <view class="bodyer">
+         <image src="../assets/logo.png" alt="" class="logo"/>
+         <text class="phonenumber" style="color: #474747">手机号</text>
+         <image src="../assets/shouji.png" alt="" class="shouji"/>
+         <input type="number" class="inphonenumber"  id="onthephonenumber"  bindinput='phoneNumberInput'  placeholder="请输入您的手机号"  bindfocus='focusPhone'  bindblur='blurPhone'
+style="color:{{color}};" maxlength='11' v-html />
+         <view class="theline1"></view>
+         <text class="thepassword"  style="color: #474747">密码</text>
+         <image src="../assets/mima.png" alt="" class="mima"/>
+         <input type="password" class="inpassword" bindinput='passWdInput'
+       bindblur='blurPw' bindfocus='focusPw' id="onthepassword" style='color:{{color}};' placeholder="请输入您的密码"  v-html />
+         <view class="theline2"></view>
+         <view class="forget">忘记密码</view>
+         <text class="others"  style="color: #141414">其他登录方式</text>
+         <image src="../assets/wechat.png" alt="" class="other1 thesame"/>
+         <image src="../assets/weibo.png" alt="" class="other2 thesame"/>
+         <image src="../assets/qq.png" alt="" class="other3 thesame" />
+         <view  class="denglu" id="denglu" style='text-align:center' bindtap='dengluclick' style="line-height:72rpx;text-align:center;">
+登录</view>
+         <view    class="zhuce" style='text-align:center;line-height:72rpx;'>
+注册</view>
+     </view>
+      <view class="bigbox1" id="bigbox1" style='display:{{display}}'>
+        <view class="tankuang1">
+             <view class="wenzi1">手机号或密码不正确</view>
+          <button class="button1" id="button1" bindtap='displayone'>知道了</button>
+        </view>
+      </view>
+      <view>{{phone}}</view>
+      <!-- <view class="bigbox2" id="bigbox2">
+        <view class="tankuang2">
+          <view class="wenzi2">登陆成功</view>
+          <button class="button2" id="button2">知道了</button>
+        </view>
+      </view> -->
+
+  </view>
+  </view>

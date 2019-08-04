@@ -1,0 +1,78 @@
+/* pages/index/shopCollection.wxss */
+ #app{
+    width: 690rpx;
+    /*height: 3150px;*/
+    padding: 0 30rpx;
+    margin: 0 auto;
+    position: relative;
+    background-color: #F6F6F6;
+    padding-bottom: 10rpx;
+  }
+  .app:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+  }
+    .orders_bg{
+    width: 100%;
+    height: 100%;
+    background-color: #F6F6F6;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+  .shopCollection_nav{
+    height: 49rpx;
+    padding-top: 17rpx;
+    padding-bottom: 10rpx;
+  }
+  .shopCollection_times{
+    float: left;
+    font-size: 28rpx;
+    color: #565656;
+    font-family: PingFang-SC-Regular;
+  }
+  .change{
+    float: right;
+    font-size: 28rpx;
+    color: #2462ff;
+    font-family: PingFang-SC-Regular;
+  }
+  .shopCollection_shop{
+    width: 690rpx;
+    height: 130rpx;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    position: relative;
+  }
+  .shopCollection_shopPicuture{
+    width: 80rpx;
+    height: 80rpx;
+    position: absolute;
+    top:50%;
+    margin-top: -40rpx;
+    left: 40rpx;
+  }
+  .shopCollection_shopName{
+    color: #000;
+    font-size: 36rpx;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    left: 160rpx;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  .shopCollection_cancel{
+    font-size: 26rpx;
+    color: #868686;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    right: 29rpx;
+    top:50%;
+    transform: translateY(-50%);
+    display: none;
+  }
