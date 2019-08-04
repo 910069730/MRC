@@ -1,0 +1,588 @@
+
+.content {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+}
+		
+	/* 背景底色样式设置 */
+.c_bg{
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: -999;
+}
+		
+	/* 需要添加收货地址模块样式 */
+.c_confirmationOrderNeedAddressImage{
+		width: 690rpx;
+		height: 150rpx;
+		border-radius:16rpx;
+}
+		
+	/* 订单确认页面地址模块样式 */
+.c_WaitingPaymentAddress{
+		margin-top: 20rpx;
+		width: 660rpx;
+		height: 180rpx;
+		background:rgba(255,255,255,1);
+		-webkit-box-shadow:0rpx 0rpx 10rpx 0rpx rgba(0, 0, 0, 0.15);
+		        box-shadow:0rpx 0rpx 10rpx 0rpx rgba(0, 0, 0, 0.15);
+		border-radius:16rpx;
+		position: relative;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		padding-left: 15rpx;
+		padding-right: 15rpx;
+}
+		
+	/* 订单确认页面地址模块样式(左侧地址图片样式) */
+.c_myAddressImage{
+		-webkit-box-flex:2;
+		-webkit-flex:2;
+		    -ms-flex:2;
+		        flex:2;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+}
+.c_myAddressImage image{
+	    width: 26rpx;
+		height: 32rpx;	
+		margin-top: 33rpx;
+}
+		
+	/* 订单确认页面地址模块样式(右间详细信息样式) */
+.c_myAddressMessage{
+		-webkit-box-flex: 16;
+		-webkit-flex: 16;
+		    -ms-flex: 16;
+		        flex: 16;
+		position: relative;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding-top: 20rpx;
+		margin-left: 15rpx;
+}
+.c_myAddressMessageName{
+		font-size:34rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(18,18,18,1);
+		margin-right: 20rpx;
+}
+.c_myAddressMessagePhoneNumber{
+		font-size:30rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(153,153,153,1);
+		margin-top: 5rpx;
+}
+.c_myAddressThisDefault{
+		width: 64rpx;
+		height: 30rpx;
+		margin-left: 17rpx;
+}
+.c_myAddressMessageAddress{
+		font-size:28rpx;
+		font-family:PingFang-SC-Regular;
+		font-weight:400;
+		color:rgba(18,18,18,1);
+		line-height: 0;
+}
+		
+	/* 订单确认页面切换地址样式 */
+.c_changeAddress{
+		width: 150rpx;
+		height: 80rpx;
+		position: absolute;
+		right: 0;
+		top: 0;
+}
+.c_changeAddress navigator{
+		font-size:24rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(153,153,153,1);
+		line-height: 100rpx;
+}
+.c_changeAddressRightBtn{
+		width: 12rpx;
+		height: 21rpx;
+		position: absolute;
+		top: 40rpx;
+		right: 30rpx;
+}
+		
+	/* 确认订单商品模块样式 */
+.c_confirmationOrder{
+	    width:690rpx;
+		height: 650rpx;
+		position: relative;
+		background:rgba(255,255,255,1);
+		-webkit-box-shadow:0rpx 0rpx 10rpx 0rpx rgba(0, 0, 0, 0.15);
+		        box-shadow:0rpx 0rpx 10rpx 0rpx rgba(0, 0, 0, 0.15);
+		border-radius:16rpx;
+		margin-top: 20rpx;
+}
+.c_shopImage{
+		width: 32rpx;
+		height: 28rpx;
+		position: absolute;
+		left: 28rpx;
+		top: 28rpx;
+}
+.c_shopName{
+	    font-size:28rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(46,45,45,1);
+		line-height:36rpx;
+		position: absolute;
+		top: 23rpx;
+		left: 74rpx;
+}
+.c_shopRightBtn{
+		width: 12rpx;
+		height: 21rpx;
+		position: absolute;
+		left: 194rpx;
+		top: 30rpx;
+}
+.c_shopGoodsImage{
+		width: 160rpx;
+		height: 160rpx;
+		position: absolute;
+		left: 26rpx;
+		top: 77rpx;
+}
+.c_shopGoodsName{
+		font-size:28rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(46,45,45,1);
+		line-height:36rpx;
+		position: absolute;
+		left: 202rpx;
+		top: 85rpx;
+}
+.c_shopGoodsAttribute{
+		font-size:24rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(136,136,136,1);
+		line-height:36rpx;
+		position: absolute;
+		left: 202rpx;
+		top: 127rpx;
+}
+.c_shopGoodsPrice{
+		font-size:36rpx;
+		font-family:PingFang-SC-Regular;
+		font-weight:400;
+		color:rgba(255,51,33,1);
+		line-height:15rpx;
+		position: absolute;
+		left: 197rpx;
+		top: 184rpx;
+}
+.c_shopGoodsPrice{
+		font-family: SanFranciscoDisplay-Regular;
+}
+.c_shopGoodsBuyNumber{
+		width: 690rpx;
+		height: 70rpx;
+		position: absolute;
+		left: 0;
+		top: 240rpx;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding-left: 74rpx;
+		padding-right: 50rpx;
+}
+.c_shopGoodsBuyNumberTitle{
+		font-size:26rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(46,45,45,1);
+		line-height:70rpx;
+		float: left;
+}
+.c_shopGoodsBuyNumberAddandDel{
+	    width: 154rpx;
+		height: 40rpx;
+		border:2px solid rgba(238,238,238,1);
+        border-radius:4px;
+		float: right;
+		margin-top: 17rpx;
+		
+		display: -webkit-box;
+		
+		display: -webkit-flex;
+		
+		display: -ms-flexbox;
+		
+		display: flex;
+		text-align: center;
+		border: 2rpx solid rgba(238,238,238,1);
+}
+.c_shopGoodsBuyNumberDel{
+	    -webkit-box-flex: 1;
+	    -webkit-flex: 1;
+	        -ms-flex: 1;
+	            flex: 1;	
+        line-height: 40rpx;
+		color: #999999;
+}
+.c_shopGoodsBuyNumberValue{
+	    -webkit-box-flex: 2;
+	    -webkit-flex: 2;
+	        -ms-flex: 2;
+	            flex: 2;
+		line-height: 40rpx;
+		border-left: 2rpx solid rgba(238,238,238,1);
+		border-right: 2rpx solid rgba(238,238,238,1);
+}
+.c_shopGoodsBuyNumberAdd{
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		line-height: 40rpx;
+		color: #999999;
+}
+.c_shopGoodsDistribution{
+		width: 690rpx;
+		height: 70rpx;
+		position: absolute;
+		left: 0;
+		top: 315rpx;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding-left: 74rpx;
+		padding-right: 50rpx;
+}
+.c_shopGoodsDistributionTitle{
+		font-size:26rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(46,45,45,1);
+		line-height:70rpx;
+}
+.c_shopGoodsDistributionTitle text{
+		color: #888888;
+}
+.c_shopGoodsDistributionPrice{
+	    font-size:26rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(46,45,45,1);
+		line-height:70rpx;	
+		float: right;
+}
+.c_shopGoodsCoupon{
+		width: 690rpx;
+		height: 70rpx;
+		position: absolute;
+		left: 0;
+		top: 390rpx;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding-left: 74rpx;
+		padding-right: 50rpx;
+}
+.c_shopGoodsCouponTitle{
+	    font-size:26rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(46,45,45,1);
+		line-height:70rpx;
+}
+.c_shopGoodsCouponNumber{
+		font-size:26rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(255,40,40,1);
+		line-height:70rpx;
+		float: right;
+}
+.c_shopGoodsCouponNumberRightBtn{
+	    width: 12rpx;
+		height: 21rpx;
+		border-radius:2rpx;
+		position: absolute;
+		right: 26rpx;
+		top:27rpx
+}
+.c_shopGoodsRemarks{
+		width: 690rpx;
+		height: 70rpx;
+		position: absolute;
+		left: 0;
+		top: 465rpx;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding-left: 74rpx;
+		padding-right: 50rpx;
+}
+.c_shopGoodsRemarksTitle{
+		font-size:26rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(18,18,18,1);
+		line-height:70rpx;
+}
+.c_shopGoodsRemarksContent{
+		font-size:26rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(18,18,18,1);
+		line-height:76rpx;
+		margin-left: 30rpx;
+}
+.c_shopGoodsBuyNumberAll{
+		width: 690rpx;
+		height: 70rpx;
+		position: absolute;
+		left: 0; 
+		bottom: 30rpx;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding-left: 74rpx;
+		padding-right: 50rpx;
+}
+.c_shopGoodsBuyNumberAllNumber{
+		font-size: 26rpx;
+		font-weight: 500;
+		font-family:PingFang-SC-Medium;
+		color: #888888;
+		line-height: 80rpx;
+}
+.c_shopGoodsBuyNumberAllSmall{
+	    font-size: 34rpx;
+		font-weight: 500;
+		font-family:PingFang-SC-Medium;
+		margin-left: 20rpx;
+		line-height: 70rpx;
+}
+.c_shopGoodsBuyNumberAllPrice{
+		font-size: 34rpx;
+		color: #ff2c2c;
+		font-weight: 500;
+		font-family:PingFang-SC-Medium;
+		line-height: 70rpx;
+}
+.c_shopGoodsBuyNumberAll text{
+		float: right;
+}
+.c_PurchasingPattern{
+	    width: 150rpx;
+		height: 50rpx;
+		position: absolute;
+		left: 0;
+		bottom: -60rpx;
+}
+.c_smallTick{
+		width: 30rpx;
+		height: 30rpx;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+}
+.c_PurchasingPatternPrompt{
+		font-size:24rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(136,136,136,1);
+		position: absolute;
+		right: 10rpx;
+		bottom: -3rpx;
+}
+		
+	/* 提交订单底栏模块样式 */
+.c_shopGoodsBuy{
+		width: 750rpx;
+		height: 98rpx;
+		background:rgba(255,255,255,1);
+	    position: fixed;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		        transform: translateX(-50%);
+		bottom: 0;
+}
+.c_shopGoodsBuySubmit{
+	    width: 180rpx;
+		height:72rpx;
+		background-color: #FFB700;
+		border-radius:4rpx;
+		position: absolute;
+		right: 30rpx;
+		text-align: center;
+		top: 14rpx;
+}
+.c_shopGoodsBuySubmit text{
+		font-size:28rpx;
+		font-family:PingFang-SC-Bold;
+		font-weight:bold;
+		color:rgba(255,255,255,1);
+		line-height:72rpx;
+}
+.c_shopGoodsBuySmall{
+	    font-size: 34rpx;
+		color: #121212;
+		font-weight: 500;
+		font-family: PingFang-SC-Medium;
+		position:absolute;
+		right: 233rpx;
+		top: 15rpx;
+}
+.c_shopGoodsBuySmall text{
+	    color: #FF2C2C;
+}
+.c_shopGoodsBuyCoupon{
+		position: absolute;
+		right: 234rpx;
+		bottom: 14rpx;
+		font-size:24rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(255,53,53,1);
+		line-height:36rpx;
+}
+		
+	/* 可用优惠卷模块样式 */
+		
+	/* 可用优惠卷模块背景样式 */
+.c_couponSelectBg{
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-color: rgba(0,0,0,0.6);
+}
+		
+	/* 可用优惠卷模块内容样式 */
+.c_couponSelectContent{
+		width: 100vw;
+		height: 720rpx;
+		background-color: #fff;
+		border-radius:16rpx 16rpx 0rpx 0rpx;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 0rpx 40rpx 0 50rpx;
+		-webkit-transition: 1s;
+		-o-transition: 1s;
+		transition: 1s;
+		text-align: center;
+}
+.c_couponSelectContentHead{
+		font-size:36rpx;
+		font-family:PingFang-SC-Regular;
+		font-weight:400;
+		color:rgba(0,0,0,1);
+	    line-height: 100rpx;
+}
+.c_couponSelectContentBody{
+		width: 750rpx;
+		height: 620rpx;
+		position: absolute;
+		left: 0;
+		top: 100rpx;
+}
+.c_coupons{
+		width: 690rpx;
+		height: 160rpx;
+		margin: 0 auto 20rpx;
+		border-radius:16rpx;
+		background: url(data:image/png;base64,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) repeat center;
+		background-size:100%;
+		position: relative;
+}
+.c_couponsMoneyUnit{
+	    font-size: 48rpx;
+		font-weight: 500;
+		font-family: PingFang-SC-Medium;
+		color: #FF3F1F;
+		position: absolute;
+		left: 46rpx;
+		top: 43rpx;
+}
+.c_couponsMoneyNumber{
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(255,63,31,1);
+		position: absolute;
+		font-size: 84rpx;
+		left: 85rpx;
+		top: 5rpx;
+}
+.c_couponsLimit{
+	    width:112rpx;
+		height:26rpx;
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAAAaCAIAAADg7U8gAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTUyMjVGM0VCMzY4MTFFOTgzNEVBNDc1QkI0OTVDM0EiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTUyMjVGM0ZCMzY4MTFFOTgzNEVBNDc1QkI0OTVDM0EiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5NTIyNUYzQ0IzNjgxMUU5ODM0RUE0NzVCQjQ5NUMzQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5NTIyNUYzREIzNjgxMUU5ODM0RUE0NzVCQjQ5NUMzQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pl1eTmgAAAZZSURBVHja7FprbBRV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) repeat center;
+		background-size: 100%;
+		border-radius:13rpx;
+		position: absolute;
+		left: 35rpx;
+		bottom: 33rpx;
+		text-align: center;
+}
+.c_couponsLimitTitle{
+		font-size:28rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(255,63,31,1);
+		position: absolute;
+		left: 178rpx;
+		top: 50rpx;
+}
+.c_couponsLimitTime{
+		font-size:20rpx;
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(255,63,31,1);
+		position: absolute;
+		left: 175rpx;
+		bottom: 36rpx;
+}
+.c_couponsUse{
+		width: 180rpx;
+		height: 160rpx;
+		font-size:28rpx;
+		font-family:PingFang-SC-Bold;
+		font-weight:bold;
+		color:rgba(255,255,255,1);
+		line-height: 160rpx;
+		text-align: center;
+		position: absolute;
+		right: 0;
+}
+
