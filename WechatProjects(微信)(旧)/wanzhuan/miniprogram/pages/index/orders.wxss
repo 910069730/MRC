@@ -1,0 +1,110 @@
+/* pages/index/orders.wxss */
+#app{
+    width: 690rpx;
+    /*height: 3150px;*/
+    padding: 0 30rpx;
+    margin: 0 auto;
+    position: relative;
+    background-color: #F6F6F6;
+    padding-bottom: 10rpx;
+  }
+  .app:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+  }
+  .orders_bg{
+    width: 100%;
+    height: 100%;
+    background-color: #F6F6F6;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+  .orders-nav{
+    height: 45rpx;
+    display: flex;
+    padding-top: 20rpx;
+    padding-bottom: 10rpx;
+    margin-bottom: 10rpx;
+  }
+  .orders-nav  .orders-nav-view{
+    text-decoration: none;
+    flex: 1;
+    color: #141414;
+    display: inline;
+    font-size: 28rpx;
+    font-family: PingFang-SC-Regular;
+    position: relative;
+    text-align: center;
+  }
+  .orders-nav .orders-nav-view .line{
+    position: absolute;
+    bottom: 0;
+    width: 56rpx;
+    height: 4rpx;
+    display: block;
+    background-color: #2462FF;
+    left: 50%; 
+    transform: translateX(-50%);
+    /* margin-left: -28rpx; */
+  }
+   .orders-body{
+    width: 690rpx;
+    height: 270rpx;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+    position: relative;
+  }
+  .ordershop{
+    width: 33rpx;
+    height: 32rpx;
+    position: absolute;
+    left: 40rpx;
+    top: 26rpx;
+  }
+  .shopname{
+    font-size: 28rpx;
+    color: #2e2d2d;
+    font-family: PingFang-SC-Medium;
+    position: absolute;
+    left: 86rpx;
+    top:22rpx;
+  }
+  .orders-right{
+    width: 15rpx;
+    height: 26rpx;
+    position: absolute;
+    left: 210rpx;
+    top: 30rpx;
+  }
+  .orders-things{
+    width: 160rpx;
+    height: 160rpx;
+    position: absolute;
+    left: 40rpx;
+    bottom: 40rpx;
+  }
+  .orders-things-name{
+    width: 450rpx;
+    height: 63rpx;
+    position: absolute;
+    right: 40rpx;
+    top:70rpx;
+    font-size: 28rpx;
+    color: #2e2d2d;
+    font-family: PingFang-SC-Medium;
+    text-align: left;
+  }
+  .orders-money{
+    font-size: 36rpx;
+    color: #ff3321;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    right: 325rpx;
+    bottom: 55rpx;
+  }

@@ -1,0 +1,45 @@
+<!--pages/index/shopCollection.wxml-->
+<view id="app" class="app">
+    <view class="shopCollection_nav">
+       <text class="shopCollection_times">你收藏了7家店铺</text>
+       <text class="change" bindtap='{{shopCollection_change}}'>{{change_do}}</text>
+    </view>
+        <view class='orders_bg'></view>
+  <!------------------------------------>
+    <view class="shopCollection_shop" style='display:{{canceltheone}}'>
+      <image src="../assets/shop_picture.png" alt="" class="shopCollection_shopPicuture" />
+      <text class="shopCollection_shopName">商家店铺</text>
+      <text class="shopCollection_cancel" bindtap='cancel_one'     style='display:{{showCancel}}'>取消收藏</text>
+    </view>
+    <view class="shopCollection_shop" style='display:{{cancelthetwo}}'>
+      <image src="../assets/shop_picture.png" alt="" class="shopCollection_shopPicuture" />
+      <text class="shopCollection_shopName">商家店铺</text>
+      <text class="shopCollection_cancel" bindtap='cancel_two'     style='display:{{showCancel}}'>取消收藏</text>
+    </view>
+    <view class="shopCollection_shop" style='display:{{cancelthethree}}'>
+      <image src="../assets/shop_picture.png" alt="" class="shopCollection_shopPicuture" />
+      <text class="shopCollection_shopName">商家店铺</text>
+      <text class="shopCollection_cancel"  bindtap='cancel_three'     style='display:{{showCancel}}'>取消收藏</text>
+    </view>
+    <view class="shopCollection_shop" style='display:{{cancelthefour}}'>
+      <image src="../assets/shop_picture.png" alt="" class="shopCollection_shopPicuture" />
+      <text class="shopCollection_shopName">商家店铺</text>
+      <text class="shopCollection_cancel"  bindtap='cancel_four'     style='display:{{showCancel}}'>取消收藏</text>
+    </view>
+    <view class="shopCollection_shop" style='display:{{cancelthefive}}'>
+      <image src="../assets/shop_picture.png" alt="" class="shopCollection_shopPicuture" />
+      <text class="shopCollection_shopName">商家店铺</text>
+      <text class="shopCollection_cancel" bindtap='cancel_five'     style='display:{{showCancel}}'>取消收藏</text>
+    </view>
+    <view class="shopCollection_shop" style='display:{{cancelthesix}}'>
+      <image src="../assets/shop_picture.png" alt="" class="shopCollection_shopPicuture" />
+      <text class="shopCollection_shopName">商家店铺</text>
+      <text class="shopCollection_cancel" bindtap='cancel_six'     style='display:{{showCancel}}'>取消收藏</text>
+    </view>
+    <view class="shopCollection_shop" style='display:{{canceltheseven}}'>
+      <image src="../assets/shop_picture.png" alt="" class="shopCollection_shopPicuture" />
+      <text class="shopCollection_shopName">商家店铺</text>
+      <text class="shopCollection_cancel" bindtap='cancel_seven'     style='display:{{showCancel}}'>取消收藏</text>
+    </view>
+  <!------------------------------------>
+  </view>

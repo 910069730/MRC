@@ -1,0 +1,47 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+				
+				 
+			    {
+				 	    "path": "pages/pay/confirmOrder",
+				"style": {
+				      	"navigationBarTitleText": "确认订单"
+				          }
+				},
+				{
+				 	    "path": "pages/pay/orderDetails",
+				"style": {
+				      	"navigationBarTitleText": "订单详情"
+				          }
+				},
+				{
+						"path": "pages/pay/editAddress",
+				"style": {
+						"navigationBarTitleText": "编辑收货地址"
+		                 }
+			    },
+				{
+				        "path": "pages/pay/addAddress",
+				"style": {
+				        "navigationBarTitleText": "添加收货地址"
+			             }
+			    },
+				{
+				        "path": "pages/pay/myAddress",
+				"style": {
+				        "navigationBarTitleText": "我的收货地址"
+				         }
+				}
+				
+				
+
+
+
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

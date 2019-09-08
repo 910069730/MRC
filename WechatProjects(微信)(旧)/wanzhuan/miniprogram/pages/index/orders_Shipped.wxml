@@ -1,0 +1,29 @@
+<!--pages/index/orders_Shipped.wxml-->
+<view id="app" class="app">
+    <view class="orders-nav">
+      <view class="orders-nav-view" bindtap='to_orders'>全部</view>
+      <view class="orders-nav-view" bindtap='to_obligation'>待付款</view>
+      <view class="orders-nav-view">待发货<view class="line"></view></view>
+      <view class="orders-nav-view" bindtap='to_Incoming'>待收货</view>
+      <view class="orders-nav-view" bindtap='to_received'>已收货</view>
+    </view>
+        <view class='orders_bg'></view>
+    <!----------------------->
+    <view class="orders-one orders-body">
+      <image src="../assets/ordershop.png" alt=""  class="ordershop"/>
+      <text class="shopname">店铺名称</text>
+      <image src="../assets/order-right_03.png" alt="" class="orders-right"/>
+      <image src="../assets/order_things_sj.png" alt="" class="orders-things"/>
+      <view class="orders-things-name">小米手机全新发布 红米pro 续航能力 强 性能更优越</view>
+      <text class="orders-money">￥1800.00</text>
+    </view>
+    <view class="orders-one orders-body">
+      <image src="../assets/ordershop.png" alt=""  class="ordershop"/>
+      <text class="shopname">店铺名称</text>
+      <image src="../assets/order-right_03.png" alt="" class="orders-right"/>
+      <image src="{{goods_image_1}}" alt="" class="orders-things"/>
+      <view class="orders-things-name">{{goods_name_1}}</view>
+      <text class="orders-money">￥{{goods_price_1}}</text>
+    </view>
+    <!----------------------->
+</view>

@@ -1,0 +1,250 @@
+ #app{
+    width: 750rpx;
+    height: 1000rpx;
+    margin: 0 auto;
+    background-color: rgba(246,246,246,1);
+  }
+  .top{
+    width: 750rpx;
+    height: 200rpx;
+    margin: 0 auto;
+    position: relative;
+    background-color: #fff;
+  }
+  .headpicture{
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    bottom: 40rpx;
+    left: 66rpx;
+    background: url("../assets/headpicture.png");
+  }
+  .headpicture image{
+        width: 100rpx;
+    height: 100rpx;
+  }
+  .name{
+    font-size: 36rpx;
+    color: #141414;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    bottom: 73rpx;
+    left: 199rpx;
+  }
+  .dingdan{
+    height: 228rpx;
+    background-color: #fff;
+    margin-top: 20rpx;
+    padding: 0 24rpx;
+  }
+  .dingdan-top{
+    height: 87rpx;
+    border-bottom: 2rpx solid #E3E3E3;
+    position: relative;
+  }
+  .alldingdan{
+    font-size: 30rpx;
+    color: #141414;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    left: 7rpx;
+    bottom: 25rpx;
+  }
+  .chakanright{
+    border:0;
+    width: 15rpx;
+    height: 26rpx;
+    position: absolute;
+    right: 2rpx;
+    bottom: 31rpx;
+  }
+  .chakan{
+    font-size: 30rpx;
+    color: #868686;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    right: 25rpx;
+    bottom: 26rpx;
+  }
+  .dingdan-body{
+    display: flex;
+    padding-top: 33rpx;
+  }
+  .dingdan-body .xuanxiang{
+    flex: 1;
+  }
+  .xuanxiang{
+    text-align: center;
+  }
+  .xuanxiangpicture{
+    margin: 0 auto;
+    width: 40rpx;
+    height: 36rpx;
+  }
+  .xuanxiang-wz{
+    margin-top: 16rpx;
+    margin-bottom: 32rpx;
+    font-size: 24rpx;
+    color: #141414;
+    font-family: PingFang-SC-Regular;
+  }
+  .manymessages{
+    height: 659rpx;
+    background-color: #fff;
+    margin-top: 20rpx;
+    padding: 0 24rpx;
+  }
+  .gerenziliao{
+    height: 89rpx;
+    padding-left: 34rpx;
+    padding-right: 2rpx;
+    border-bottom: 2rpx solid #E3E3E3;
+    position: relative;
+  }
+  .shouhuodizhi{
+    height: 89rpx;
+    padding-left: 34rpx;
+    padding-right: 2rpx;
+    border-bottom: 2rpx solid #E3E3E3;
+    position: relative;
+  }
+  .youhuijuan{
+    height: 89rpx;
+    padding-left: 34rpx;
+    padding-right: 2rpx;
+    border-bottom: 2rpx solid #E3E3E3;
+    position: relative;
+  }
+  .shangpingshoucang{
+    height: 89rpx;
+    padding-left: 34rpx;
+    padding-right: 2rpx;
+    border-bottom: 2rpx solid #E3E3E3;
+    position: relative;
+  }
+  .dianpushoucang{
+    height: 89rpx;
+    padding-left: 34rpx;
+    padding-right: 2rpx;
+    border-bottom: 2rpx solid #E3E3E3;
+    position: relative;
+  }
+  .gerenziliaopicture{
+    width: 30rpx;
+    height: 32rpx;
+    position: absolute;
+    left:33rpx;
+    top:29rpx;
+  }
+  .shouhuodizhipicture{
+    width: 30rpx;
+    height: 32rpx;
+    position: absolute;
+    left:33rpx;
+    top:29rpx;
+  }
+  .youhuijuanpicture{
+    width: 30rpx;
+    height: 32rpx;
+    position: absolute;
+    left:33rpx;
+    top:29rpx;
+  }
+  .shangpingshoucangpicture{
+    width: 30rpx;
+    height: 32rpx;
+    position: absolute;
+    left:33rpx;
+    top:29rpx;
+  }
+  .dianpushoucangpicture{
+    width: 30rpx;
+    height: 32rpx;
+    position: absolute;
+    left:33rpx;
+    top:29rpx;
+  }
+  .messages-right{
+    width: 15rpx;
+    height: 26rpx;
+    position: absolute;
+    right: 2rpx;
+    bottom: 31rpx;
+  }
+  .gerenziliao-wz{
+    font-size: 30rpx;
+    color: #141414;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    left: 96rpx;
+    bottom: 28rpx;
+  }
+  .shouhuodizhi-wz{
+    font-size: 30rpx;
+    color: #141414;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    left: 96rpx;
+    bottom: 28rpx;
+  }
+  .youhuijuan-wz{
+    font-size: 30rpx;
+    color: #141414;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    left: 96rpx;
+    bottom: 28rpx;
+  }
+  .shangpingshoucang-wz{
+    font-size: 30rpx;
+    color: #141414;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    left: 96rpx;
+    bottom: 28rpx;
+  }
+  .dianpushoucang-wz{
+    font-size: 30rpx;
+    color: #141414;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    left: 96rpx;
+    bottom: 28rpx;
+  }
+   .nav {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  .nav:after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+  }
+  .nav .navview{
+    margin-top: 15rpx;
+    width: 250rpx;
+    flex: 1;
+  }
+  .nav  .navimg{
+    border: 0;
+    width: 38rpx;
+    height: 40rpx;
+        margin: 0 auto;
+  }
+  .nav .navimg image{
+        width: 38rpx;
+    height: 40rpx;
+  }
+  .nav .navview view{
+    margin-top: -7rpx;
+    margin-bottom: 13rpx;
+    font-size: 24rpx;
+    text-align: center;
+    font-family: PingFang-SC-Medium;
+  }

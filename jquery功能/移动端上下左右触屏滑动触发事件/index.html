@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-1.9.0.min.js"></script>
+    <title>标题</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #touchBox{
+            width: 100%;
+            height: 200px;
+            position: relative;
+            background-color: yellow;
+            text-align: center;
+              display:table;
+              transition: 1s;
+        }
+        span{
+            display: table-cell;
+            vertical-align:middle;    
+            color: red;
+        }
+        .positionLeft{
+            width: 50%;
+            padding-right: 50%;
+        }
+        .positionRight{
+            width: 50%;
+            padding-left: 50%;
+        }
+        .positionTop{
+              height: 100px;
+              padding-bottom: 100px;
+        }
+        .positionBottom{
+              height: 100px;
+              padding-top: 100px;
+        }
+    </style>
+</head>
+<body>
+   <div id="touchBox" class="touchBox">
+       <span class="positionCenter">hello</span>
+   </div>
+</body>
+</html>
+<script>
+    var touchMove=$("#touchBox");
+
+    touchMove.on("touchstart", function(e) {
+ e.preventDefault();
+ startX = e.originalEvent.changedTouches[0].pageX,
+ startY = e.originalEvent.changedTouches[0].pageY;
+});
+touchMove.on("touchmove", function(e) {
+ e.preventDefault();
+ moveEndX = e.originalEvent.changedTouches[0].pageX,
+ moveEndY = e.originalEvent.changedTouches[0].pageY,
+ X = moveEndX - startX,
+ Y = moveEndY - startY;
+  
+ if ( Math.abs(X) > Math.abs(Y) && X > 0 ) {
+  //往右滑
+$('span').removeClass().addClass("positionRight");
+ }
+ else if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
+ //往左滑
+$('span').removeClass().addClass("positionLeft");
+ }
+ else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+//往下滑
+$('span').removeClass().addClass("positionBottom");
+ }
+ else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+//往上滑
+$('span').removeClass().addClass("positionTop");
+ }
+ else{
+//其他情况
+ }
+});
+</script>

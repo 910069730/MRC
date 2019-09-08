@@ -1,0 +1,88 @@
+    <view id="app">
+      <!-- 头像和昵称 -->
+      <view class="top">
+         <view class="headpicture"><image src='../assets/headpicture.png' /></view>
+         <text class="name">{{name}}</text>
+      </view>
+      <!-- 订单栏目 -->
+     <view class="dingdan">
+        <view class="dingdan-top" bindtap='to_orders'>
+            <text class="alldingdan">全部订单</text>
+            <image src="../assets/right.png" alt="" class="chakanright" />
+            <text class="chakan" >查看</text>
+        </view>
+        <view class="dingdan-body">
+         <view class="xuanxiang" bindtap='to_obligation'>
+         <view>
+         <image src="../assets/daifukuan.png" alt="" style="display: block"class="xuanxiangpicture" />
+         </view>
+         <view class="xuanxiang-wz">待付款</view>
+         </view>
+         <view class="xuanxiang" bindtap='to_Shipped'>
+         <image src="../assets/daifahuo.png" alt="" style="display: block" class="xuanxiangpicture"/>
+         <view class="xuanxiang-wz">待发货</view>
+         </view>
+         <view class="xuanxiang" bindtap='to_Incoming'>
+         <image src="../assets/daishouhuo.png" alt="" style="display: block" class="xuanxiangpicture"/>
+         <view class="xuanxiang-wz">待收货</view>
+         </view>
+         <view class="xuanxiang" bindtap='to_received'>
+         <image src="../assets/yishouhuo.png" alt="" style="display: block" class="xuanxiangpicture"/>
+         <view class="xuanxiang-wz">已收货</view>
+         </view>
+         <view class="xuanxiang">
+         <image src="../assets/shouhou.png" alt="" style="display: block" class="xuanxiangpicture"/>
+         <view class="xuanxiang-wz">退款 / 售后</view>
+         </view>
+        </view>
+     </view>
+      <!-- 详细信息资料 -->
+      <view class="manymessages">
+        <view class="gerenziliao">
+          <image src="../assets/gerenziliao_29.png" alt="" class="gerenziliaopicture"/>
+          <text class="gerenziliao-wz">个人资料</text>
+          <image src="../assets/right.png" alt="" class="messages-right"/>
+        </view>
+        <view class="shouhuodizhi">
+          <image src="../assets/shouhuodizhi_32.png" alt="" class="shouhuodizhipicture"/>
+          <text class="shouhuodizhi-wz">收货地址</text>
+          <image src="../assets/right.png" alt="" class="messages-right"/>
+        </view>
+        <view class="youhuijuan">
+          <image src="../assets/youhuijuan_35.png" alt="" class="youhuijuanpicture"/>
+          <text class="youhuijuan-wz">优惠卷</text>
+          <image src="../assets/right.png" alt="" class="messages-right"/>
+        </view>
+        <view class="shangpingshoucang" bindtap='to_Collection'>
+          <image src="../assets/shangpingshoucang_38.png" alt="" class="shangpingshoucangpicture"/>
+          <text class="shangpingshoucang-wz">商品收藏</text>
+          <image src="../assets/right.png" alt="" class="messages-right"/>
+        </view>
+        <view class="dianpushoucang" bindtap='to_shopCollection'>
+          <image src="../assets/dianpushoucang_40.png" alt="" class="dianpushoucangpicture"/>
+          <text class="dianpushoucang-wz">店铺收藏</text>
+          <image src="../assets/right.png" alt="" class="messages-right"/>
+        </view>
+      </view>
+      <!-- 底部导航栏 -->
+      <view class="nav">
+        <view class='navview' bindtap='towanzhuanindex'>
+        <view class="navimg">
+        <image src='../assets/shangmengyuanse_43.png'></image>
+        </view>
+        <view >商盟</view>
+        </view>
+        <view class='navview'>
+        <view class="navimg">
+        <image src='../assets/fuwu_42.png'></image>
+        </view>
+        <view>服务</view>
+        </view>
+        <view class='navview'>
+        <view class="navimg">
+        <image src='../assets/wode_46.png'></image>
+        </view>
+        <view style="color: #2462FF">我的</view>
+        </view>
+      </view>
+    </view>

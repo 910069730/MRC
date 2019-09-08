@@ -1,0 +1,271 @@
+ .all{
+     text-align: left;
+    background-color: #f6fcff;
+    width:750rpx;
+     /* height: 1270rpx; */
+     height: 100%;
+    margin:0 auto;
+    overflow: hidden;
+    padding-top:64rpx;
+    /* position: relative; */
+    position: fixed;
+  }
+  /* .fanhui{
+
+    width:24rpx;
+    height: 42rpx;
+  }
+  .fanhuia{
+    display: block; 
+    position: absolute;
+    left: 24rpx; */
+    /* margin-left: 24rpx; */
+    /* float: left; */
+  /* } */
+  .title{
+    margin: 0;
+    margin-left: 66rpx;
+    font-size: 60rpx;
+    margin-top: 108rpx;
+    color: #000000;
+    font-weight: bold;
+    font-family: PingFang-SC-Bold;
+  }
+  .bodyer{
+    width: 620rpx;
+    height: 570rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    position: absolute;
+    top: 290rpx;
+    left: 66rpx;
+    box-shadow: 0 0 8rpx 4rpx rgba(36,98,255,0.1);
+  }
+  .logo{
+    width: 240rpx;
+    height: 220rpx;
+    position: absolute;
+    right: -10rpx;
+    top:-176rpx;
+  }
+ .phonenumber{
+   position: absolute;
+   font-size: 30rpx;
+   top: 48rpx;
+   left: 38rpx;
+ }
+  .shouji{
+    width: 34rpx;
+    height: 34rpx;
+    position: absolute;
+    left: 30rpx;
+    top:106rpx;
+  }
+  .inphonenumber{
+    width: 192rpx;
+    height: 24rpx;
+    position: absolute;
+    left: 78rpx;
+    top: 100rpx;   
+    font-size: 24rpx;
+    border: 0;
+    outline: none;
+    color: #C0C0C0;
+  }
+  .theline1{
+    width: 560rpx;
+    height: 2rpx;
+    background-color: #E3E3E3;
+    position: absolute;
+    top: 170rpx;
+    left: 30rpx;
+  }
+  .thepassword{
+    position: absolute;
+    font-size: 30rpx;
+    top: 210rpx;
+    left: 40rpx;
+  }
+  .mima{
+    width: 34rpx;
+    height: 34rpx;
+    position: absolute;
+    left: 30rpx;
+    top:266rpx;
+  }
+  .inpassword{
+    width: 192rpx;
+    height: 24rpx;
+    position: absolute;
+    left: 80rpx;
+    top: 260rpx;
+    font-size: 24rpx;
+    border: 0;
+    outline: none;
+    color: #C0C0C0;
+  }
+.theline2{
+  width: 560rpx;
+  height: 2rpx;
+  background-color: #E3E3E3;
+  position: absolute;
+  top: 332rpx;
+  left: 30rpx;
+}
+  .forget{
+    font-size: 24rpx;
+    color: #3E8BFF;
+    text-decoration: none;
+    position: absolute;
+    top: 356rpx;
+    right: 40rpx;
+  }
+  .others{
+     font-size: 30rpx;
+    position: absolute;
+    left: 40rpx;
+    top: 418rpx;
+  }
+  .thesame{
+    position: absolute;
+    width: 48rpx;
+    height: 48rpx;
+    bottom: 50rpx;
+  }
+  .other1{
+    left: 38rpx;
+  }
+.other2{
+  left: 102rpx;
+}
+.other3{
+  left: 166rpx;
+}
+  .denglu{
+    width: 286rpx;
+    height: 72rpx;
+    outline: none;
+    border: 0;
+    background-color: #FFFFFF;
+    border-radius: 10rpx;
+    position: absolute;
+    bottom: -150rpx;
+    border: 1px solid #3E8BFF;
+    color: #3E8BFF;
+    cursor: pointer;
+    font-size: 30rpx;
+    padding: 0;
+    font-weight: bold;
+  }
+.denglu:hover{
+  background-color: #3E8BFF;
+  color: #FFFFFF;
+}
+  .zhuce{
+    width: 286rpx;
+    height: 72rpx;
+    outline: none;
+    border: 0;
+    background-color: #FFFFFF;
+    border-radius: 10rpx;
+    position: absolute;
+    right: 0;
+    bottom: -150rpx;
+    border: 1px solid #3E8BFF;
+    color: #3E8BFF;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30rpx;
+    padding: 0;
+    font-weight: bold;
+  }
+.zhuce:hover{
+  background-color: #3E8BFF;
+  color: #FFFFFF;
+}
+
+.bigbox1{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+  }
+.tankuang1{
+  width:500rpx;
+  height: 400rpx;
+  position: absolute;
+  background-color: #f6fcff;
+  border-radius: 20rpx;
+  left: 50%;
+  top:50%;
+  margin-left: -250rpx;
+  margin-top: -200rpx;
+}
+ .wenzi1{
+   text-align: center;
+   font-size: 40rpx;
+   margin-top: 130rpx;
+ }
+ .button1{
+   width: 196rpx;
+   height: 72rpx;
+   background-color: #3E8BFF;
+   border: 0;
+   border-radius: 20rpx;
+   font-size: 30rpx;
+   position: absolute;
+   left: 50%;
+   margin-left: -100rpx;
+   bottom: 40rpx;
+   border:4rpx solid #3E8BFF;
+   color: #fff;
+   cursor: pointer;
+   outline: none;
+ }
+
+  /* .bigbox2{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+  }
+  .tankuang2{
+    width:500rpx;
+    height: 400rpx;
+    position: absolute;
+    background-color: #f6fcff;
+    border-radius: 20rpx;
+    left: 50%;
+    top:50%;
+    margin-left: -250rpx;
+    margin-top: -200rpx;
+  }
+  .wenzi2{
+    text-align: center;
+    font-size: 40rpx;
+    margin-top: 130rpx;
+  }
+  .button2{
+    width: 196rpx;
+    height: 72rpx;
+    background-color: #3E8BFF;
+    border: 0;
+    border-radius: 20rpx;
+    font-size: 30rpx;
+    position: absolute;
+    left: 50%;
+    margin-left: -100rpx;
+    bottom: 40rpx;
+    border:4rpx solid #3E8BFF;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+  } */

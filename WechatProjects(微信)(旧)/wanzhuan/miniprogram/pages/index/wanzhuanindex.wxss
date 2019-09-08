@@ -1,0 +1,278 @@
+
+#app{
+   width: 690rpx;
+   /*2800*/
+   height: 2810rpx;
+   padding: 0 30rpx;
+   margin: 0 auto;
+   position: relative;
+ }
+  .top{
+   margin-top:26rpx;
+   height: 64rpx;
+    position: relative;
+    padding-bottom: 20rpx;
+  }
+  .sousuo{
+    width: 446rpx;
+    height: 27rpx;
+    float: right;
+    border: 0;
+    border-radius: 10rpx;
+    background-color: #f1f1f1;
+    outline: none;
+    padding-left: 184rpx;
+    padding-top:19rpx;
+    padding-bottom: 18rpx;
+    color:#565656;
+    font-size: 28rpx;
+    overflow: hidden;
+  }
+  .more{
+    width: 38rpx;
+    height: 38rpx;
+    border: 0;
+    border-radius: 2rpx;
+    float: left;
+    margin-top: 23rpx;
+  }
+  .search{
+    width: 26rpx;
+    height: 26rpx;
+    position: absolute;
+    right: 450rpx;
+    top: 30rpx;
+  }
+  .jingpin{
+    width: 90rpx;
+    height: 100rpx;
+    display: block;
+    border: 0;
+  }
+  .jingpin-wz{
+    margin-top: 9rpx;
+    text-align: center;
+  }
+  .baokuan{
+    width: 90rpx;
+    height: 100rpx;
+    display: block;
+    border: 0;
+  }
+  .baokuan-wz{
+    margin-top: 9rpx;
+    text-align: center;
+  }
+  .lianying{
+    width: 90rpx;
+    height: 100rpx;
+    display: block;
+    border: 0;
+  }
+  .lianying-wz{
+    margin-top: 9rpx;
+    text-align: center;
+  }
+  .ziying{
+    width: 90rpx;
+    height: 100rpx;
+    display: block;
+    border: 0;
+  }
+  .ziying-wz{
+    margin-top: 9rpx;
+    text-align: center;
+  }
+  .fupin{
+    width: 90rpx;
+    height: 100rpx;
+    display: block;
+    border: 0;
+  }
+  .fupin-wz{
+    margin-top: 9rpx;
+    text-align: center;
+  }
+  .fiveChecks{
+    width: 690rpx;
+  }
+  .fiveChecks:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  .fiveChecks .fiveview{
+    width: 90rpx;
+    float: left;
+    margin-right: 53rpx;
+  }
+  .fiveChecks .fiveview:first-child{
+    margin-left: 14rpx;
+  }
+  .fiveChecks .fiveview:last-child{
+    margin-right: 0;
+  }
+  .fiveChecks .fiveview view{
+    font-family: PingFang-SC-Medium;
+    color: #2E2D2D;
+    font-size: 24rpx;
+    margin-bottom: 0;
+  }
+  .threeBlocks{
+    width: 690rpx;
+    margin-top: 50rpx;
+  }
+  .threeBlocks:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  .threeBlocks  image{
+    width: 216rpx;
+    height: 200rpx;
+    border-radius: 10rpx;
+    border: 0;
+    margin-left: 21rpx;
+     float: left;
+      box-shadow:0rpx 0rpx 15rpx 0rpx rgba(0,0, 0, 0.1);
+  }
+  .threeBlocks image:first-child{
+    margin-left: 0;
+  }
+  .threeBlocks image:hover{
+    box-shadow:0rpx 0rpx 15rpx 0rpx #e9f2ff;
+  }
+
+   .bodyer{
+     height: 70rpx;
+     padding-top: 50rpx;
+     display: flex;
+     white-space:nowrap;
+     /* justify-content: space-between; */
+   }
+  .bodyer .choose{
+    font-weight: bold;
+    font-size: 28rpx;
+    font-family: PingFang-SC-Bold;
+    height: 70rpx;
+    width: 140rpx;
+    margin-right:10rpx; 
+    display:inline-block;
+    text-align: center;
+    /* flex: 2; */
+  }
+  .bodyer .others{
+    /* flex: 1; */
+    margin-right: 0;
+    width: 80rpx;
+    /* background-color: red; */
+  }
+  .bodyer .choose text{
+    color: #141414;
+  }
+
+  .goods{
+    width: 690rpx;
+    height: 1800rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #F6F6F6;
+    padding: 0 30rpx;
+  }
+  .goods-one{
+    width: 336rpx;
+    height: 400rpx;
+    background-color: #fff;
+    float: left;
+    margin-top: 20rpx;
+    border-radius: 10rpx;
+    position: relative;
+  }
+  .goods-one view{
+    margin: 0 ;
+    padding: 0;
+    font-size: 30rpx;
+    color: #2e2d2d;
+    font-family: PingFang-SC-Medium;
+    text-align: center;
+  }
+  .goods-one:nth-child(even){
+    margin-left: 18rpx;
+  }
+  .goods-img{
+    width: 336rpx;
+    height: 280rpx;
+  }
+  .money{
+    color: #ff3321;
+    font-size: 30rpx;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    left: 28rpx;
+    bottom: 18rpx;
+  }
+  .times{
+    font-size: 20rpx;
+    color: #868686;
+    font-family: PingFang-SC-Regular;
+    position: absolute;
+    right: 28rpx;
+    bottom: 24rpx;
+  }
+
+  .nav {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  .nav:after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+  }
+  .nav .navview{
+    margin-top: 15rpx;
+    width: 250rpx;
+    flex: 1;
+  }
+  .nav  .navimg{
+    border: 0;
+    width: 38rpx;
+    height: 40rpx;
+        margin: 0 auto;
+  }
+  .nav .navimg image{
+        width: 38rpx;
+    height: 40rpx;
+  }
+  .nav .navview view{
+    margin-top: -7rpx;
+    margin-bottom: 13rpx;
+    font-size: 24rpx;
+    text-align: center;
+    font-family: PingFang-SC-Medium;
+  }
+
+  swiper{
+    height: 350rpx;
+    width: 100%;
+    margin-bottom: 40rpx;
+  }
+  swiper-item{
+    height: 100%;
+    width: 100%;
+  }
+  .slide-image{
+    height: 100%;
+    width: 100%；
+  }

@@ -1,0 +1,142 @@
+ <view id="app">
+      <!-- 搜索框 -->
+      <view class="top">
+        <image src="../assets/more.png" alt="" class="more"/>
+        <input type="text" class="sousuo" placeholder="搜索玩赚商场"/>
+        <image src="../assets/search.png" alt="" class="search" />
+      </view>
+      <!-- 轮播图 -->
+      <view style="margin-top:30rpx" >
+      <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+      <block wx:for="{{imgUrls}}">
+      <swiper-item>
+      <image src="{{item}}" class="slide-image" style="width:690rpx;height:290rpx;" />
+      </swiper-item>
+      </block>
+      </swiper>
+      </view>
+      <!-- 热点栏目 -->
+      <view class="fiveChecks">
+        <view class='fiveview'>
+          <image src="../assets/jingpin.png" alt="" class="jingpin"/>
+          <view class="jingpin-wz">精品</view>
+        </view>
+        <view class='fiveview'>
+          <image src="../assets/baokuan.png" alt="" class="baokuan"/>
+          <view class="baokuan-wz">爆款</view>
+        </view>
+        <view class='fiveview'>
+          <image src="../assets/lianying.png" alt="" class="lianying"/>
+          <view class="lianying-wz">联营</view>
+        </view>
+        <view class='fiveview'>
+          <image src="../assets/ziying.png" alt="" class="ziying"/>
+          <view class="ziying-wz">自营</view>
+        </view>
+        <view class='fiveview'>
+          <image src="../assets/fupin.png" alt="" class="fupin"/>
+          <view class="fupin-wz">扶贫</view>
+        </view>
+      </view>
+      <!-- 限时栏目 -->
+      <view class="threeBlocks">
+        <image src="../assets/one.png" alt=""/>
+        <image src="../assets/two.png" alt=""/>
+        <image src="../assets/three.png" alt=""/>
+      </view>
+      <!-- 推荐栏目 -->
+      <scroll-view class="bodyer" scroll-x="true">
+        <view class="selection choose">
+        <text  style="color: #1B76FF">精选推荐</text>
+        </view>
+        <view class="appliance choose">
+        <text>家用电器</text>
+        </view>
+        <view class="kitchen choose">
+        <text >居家餐厨</text>
+        </view>
+        <view class="sports choose">
+        <text >运动户外</text>
+        </view>
+        <view class="digital choose">
+        <text >手机数码</text>
+        </view>
+         <view class="others choose">
+        <text >其他</text>
+        </view>
+      </scroll-view>
+
+       <view class="goods">
+        <view class="goods-one">
+          <image src="../assets/goods-sj.png" alt="" class="goods-img" />
+          <view>小米手机全新发布 ...</view>
+          <text class="money">￥1800.00</text>
+          <text class="times">销量:333</text>
+        </view>
+        <view class="goods-one">
+          <image src="../assets/goods-sj.png" alt="" class="goods-img" />
+          <view>小米手机全新发布 ...</view>
+          <text class="money">￥1800.00</text>
+          <text class="times">销量:333</text>
+        </view>
+        <view class="goods-one">
+          <image src="../assets/goods-sj.png" alt="" class="goods-img" />
+          <view>小米手机全新发布 ...</view>
+          <text class="money">￥1800.00</text>
+          <text class="times">销量:333</text>
+        </view>
+        <view class="goods-one">
+          <image src="../assets/goods-sj.png" alt="" class="goods-img" />
+          <view>小米手机全新发布 ...</view>
+          <text class="money">￥1800.00</text>
+          <text class="times">销量:333</text>
+        </view>
+        <view class="goods-one">
+          <image src="../assets/goods-sj.png" alt="" class="goods-img" />
+          <view>小米手机全新发布 ...</view>
+          <text class="money">￥1800.00</text>
+          <text class="times">销量:333</text>
+        </view>
+        <view class="goods-one">
+          <image src="../assets/goods-sj.png" alt="" class="goods-img" />
+          <view>小米手机全新发布 ...</view>
+          <text class="money">￥1800.00</text>
+          <text class="times">销量:333</text>
+        </view>
+        <view class="goods-one">
+          <image src="../assets/goods-sj.png" alt="" class="goods-img" />
+          <view>小米手机全新发布 ...</view>
+          <text class="money">￥1800.00</text>
+          <text class="times">销量:333</text>
+        </view>
+        <view class="goods-one">
+          <image src="../assets/goods-sj.png" alt="" class="goods-img" />
+          <view>小米手机全新发布 ...</view>
+          <text class="money">￥1800.00</text>
+          <text class="times">销量:333</text>
+        </view>
+
+      </view>
+      <!-- 底部导航栏 -->
+      <view class="nav">
+        <view class='navview'>
+             <view class="navimg">
+               <image src='../assets/shouye_39.png'></image>
+             </view>
+               <view style="color: #2462FF">商盟</view>
+        </view>
+        <view class='navview'>
+              <view class="navimg">
+              <image src='../assets/fuwu_42.png'></image>
+              </view>
+              <view>服务</view>
+        </view>
+        <view class='navview' bindtap='towanzhuanme'>
+               <view class="navimg">
+               <image src='../assets/me_45.png'></image>
+               </view>
+               <view>我的</view>
+        </view>
+      </view>
+  </view>
+

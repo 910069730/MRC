@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'>
+<title>标题</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="jquery-1.12.4.js"></script>
+<style>
+    .input-group .input-group-addon.search{
+        background-color: #5cb85c;
+        border-color: transparent;
+        color: #fff;
+    }
+    #searchMessageList{
+        width: 100%;
+        background-color: transparent;
+        border-radius: 0px;
+        position: absolute;
+        left: 0;
+        top:33px;
+        z-index: 1;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0;
+        overflow: hidden;
+        border: none;
+    }
+    #searchMessageList .searchMessage{
+        margin-top: 0;
+    }
+    .searchMessage{
+        width: 100%;
+        background-color: rgb(247, 240, 240);
+        border-radius: 0px;
+        float: left;
+        z-index: 1;
+        cursor: pointer;
+        list-style: none;
+    }
+    .searchMessage:hover{
+        background-color: #ddd;
+    }
+    .searchMessage:hover a{
+        color: #000;
+    }
+    .searchMessage a{
+        padding: 7px 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+        display: block;
+        text-align: left;
+        text-decoration: none;
+    }
+    #search.form-control:focus{
+        box-shadow: none;
+    }
+    .search{
+        position: relative;
+        z-index: 2;
+    }
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+        <div class="row">
+        <div class="col-xs-4 col-xs-push-4" style="margin-top: 30px;padding: 0;position: relative;">
+            <div   class="input-group">
+                <input id="search" class="form-control" type="text" value="" autocomplete="off" >
+                <span class="input-group-addon btn btn-success search">查找</span>
+            </div>
+            <ul id="searchMessageList"><!--ToDo--></ul>
+        </div>
+    </div>
+</div>
+    
+<script src="pinyin.js"></script>
+    <script>
+        $(function(){
+            var searchNum=3;
+            var searchInitialNum=0;
+            var searchInitialFlag=false;
+            var searchOverFlage=true;
+            var searchAllResults=[];
+            $('#search').focus(function(){ 
+                searchInitialNum=0;
+                $('#searchMessageList').empty();    
+                searchInitialFlag=true;   
+                $('#searchMessageList').stop().show();
+                if($.trim($(this).val())!=""){
+                    searchInitialNum=0;
+                    $('#searchMessageList').empty();
+                    if($("#searchMessageList>li").length==0){
+                        for(var i=0;i<searchAllResults.length;i++){
+                            if(searchAllResults[i].name.toLowerCase().indexOf($.trim($('#search').val().toLowerCase()))==0&&$('#search').val()!=""||pinyin.getFullChars(searchAllResults[i].name).toLowerCase().indexOf($.trim($('#search').val().toLowerCase()))==0&&$('#search').val()!=""){
+                                        if(searchInitialNum<searchNum){
+                                                   searchInitialNum++
+                                                   $('#searchMessageList').append('<li class="searchMessage  btn-block"><a href="'+searchAllResults[i].href+'">'+searchAllResults[i].name+'</a></li>')                                                      
+                                               
+                                        }
+                                    }
+                                }
+                                
+                    }
+                }else{
+                    searchInitialNum=0;
+                    $('#searchMessageList').empty();
+                    $.ajax({
+                            url:"data.json",
+                            type:"get",
+                            success:function(res){
+                                $('#searchMessageList').empty();
+                                res.sort(function(){return Math.random()>0.5?-1:1;}); 
+                                searchAllResults=res;
+                            }
+                        })
+                }
+            })    
+
+            $('#search').bind("input propertychange",function(){         
+                if($.trim($(this).val())!=""){
+                    searchInitialNum=0;
+                    $('#searchMessageList').empty();
+                    if($("#searchMessageList>li").length==0){
+
+                        for(var i=0;i<searchAllResults.length;i++){
+                                    if(searchAllResults[i].name.toLowerCase().indexOf($.trim($('#search').val().toLowerCase()))==0&&$('#search').val()!=""||pinyin.getFullChars(searchAllResults[i].name).toLowerCase().indexOf($.trim($('#search').val().toLowerCase()))==0&&$('#search').val()!=""){
+                                        if(searchInitialNum<searchNum){
+                                                   searchInitialNum++
+                                                   $('#searchMessageList').append('<li class="searchMessage  btn-block"><a href="'+searchAllResults[i].href+'">'+searchAllResults[i].name+'</a></li>')                                                      
+                                        }
+                                    }
+                                }
+
+                    }
+                }else{
+                    searchInitialNum=0;
+                    $('#searchMessageList').empty();
+                }
+            })
+            $('#searchMessageList').on("mouseover",'.searchMessage',function(){
+                searchOverFlage=false;
+            })
+            $('#searchMessageList').on("mouseout",'.searchMessage',function(){
+                searchOverFlage=true;
+            })
+  
+            $('#search').blur(function(){
+                if(searchOverFlage){
+                    searchInitialFlag=false;
+                    searchInitialNum=0;
+                    $('#searchMessageList').stop().fadeOut(100,function(){
+                        $('#searchMessageList').empty();
+                    })
+                }
+            })
+            $(window).keyup(function(){
+                if(searchInitialFlag){
+                            searchInitialNum=0;
+                            $('#searchMessageList').empty();
+                            if($("#searchMessageList>li").length==0){
+                                for(var i=0;i<searchAllResults.length;i++){
+                                    if(searchAllResults[i].name.toLowerCase().indexOf($.trim($('#search').val().toLowerCase()))==0&&$('#search').val()!=""||pinyin.getFullChars(searchAllResults[i].name).toLowerCase().indexOf($.trim($('#search').val().toLowerCase()))==0&&$('#search').val()!=""){
+                                        if(searchInitialNum<searchNum){
+                                                   searchInitialNum++
+                                                   $('#searchMessageList').append('<li class="searchMessage  btn-block"><a href="'+searchAllResults[i].href+'">'+searchAllResults[i].name+'</a></li>')                                                      
+                                        }
+                                    }
+                                }
+                            }
+                }else{
+                    searchInitialNum=0;
+                    $('#searchMessageList').empty();
+                }
+                
+            })
+        })
+    </script>
+    
+</body>
+</html>

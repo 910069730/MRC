@@ -1,0 +1,7 @@
+<script>
+if (!(/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent))) {  //PC端
+
+}else{  //移动端
+
+}
+</script>

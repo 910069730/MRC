@@ -1,0 +1,63 @@
+﻿
+<html>
+<meta charset="UTF-8">
+<head>
+	<title>用户登录</title>
+</head>
+<style type="text/css">
+	form{
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		height: 500px;
+        margin-top: 150px;
+	}
+</style>
+<body>
+<center>
+	<p><font size=5 color=blue><b>学生成绩管理系统</b></font></p>
+</center>
+<hr color=red>
+    <form action="Login.jsp" method="post" id="form" name="frmLogin">
+    	<font color=midnightblue size=4><strong>用户名称
+    		<input id="user" name="UserNm"><p></p>用户密码
+    		<input type="password" name="UserPasswd" id="pwd"><p></p>
+    	</strong>
+    	</font>
+
+         <!-- 按下此指令按钮可进行资料检查并送出表单资料 -->
+          <input type="button" name="button" onclick="datacheck()" value="登录">
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+	
+          //下面是对用户账号和密码检查的函数定义
+          //确保前台数据的合法
+          function datacheck(){
+          	var	form=document.getElementById("form");
+          	var user=document.getElementById("user").value;
+          	var pwd=document.getElementById("pwd").value;
+          
+          	if (user.length==0 || pwd.length==0 ) {
+          		window.alert("用户名和密码不能为空！");
+
+          		return; //离开函数
+            }
+            else if(frmLogin.UserNm.value==""){
+            	//if判断语句将检查是否输入账号
+            	window.alert("您必须完成账号的输入！"); //提示信息(即显示错误信息)
+            	document.frmLogin.elements(0).focus();//将光标移至账号输入栏
+                
+                return; //离开函数
+            }
+            else if(frmLogin.UserPasswd.value==""){
+            	//if判断语句将检查是否输入密码
+            	window.alert("您必须完成密码的输入！"); //提示信息(即显示错误信息)
+            	document.frmLogin.elements(1).focus();//将光标移至密码输入栏
+
+            	return;//离开函数
+
+            }else form.submit();
+          }
+</script>

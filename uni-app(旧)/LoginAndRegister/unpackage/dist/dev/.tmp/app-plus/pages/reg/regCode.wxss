@@ -1,0 +1,121 @@
+
+.content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+/* 新用户注册码界面头部样式 */
+.regHead{
+	width: 750rpx;
+	height: 100rpx;
+	margin-top: 72rpx;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.regBigH{
+	position: absolute;
+	left: 30rpx;
+	top: 0;
+	font-size:44rpx;
+	font-family:PingFangSC-Semibold;
+	font-weight:600;
+	color:rgba(51,51,51,1);
+	line-height:44rpx;
+}
+
+/* 注册账号窗口样式 */
+.regBody{
+    width: 750rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding-left: 68rpx;
+	padding-top: 138rpx;
+	padding-right: 64rpx;
+	position: relative;
+}
+.regBody .regUser_regCodeH{
+	font-size:30rpx;
+	font-family:PingFangSC-Regular;
+	font-weight:400;
+	color:rgba(155,155,155,1);
+	line-height:32rpx;
+}
+.regUser_regCode{
+    font-size:32rpx;
+	font-family:PingFangSC-Regular;
+	font-weight:400;
+	line-height:32rpx;
+	border-bottom: 1px solid #eee;
+	margin-top: 34rpx;
+	padding-bottom: 20rpx;
+	padding-right: 70rpx;
+	color:rgba(74,74,74,1);
+}
+.next{
+	width:560rpx;
+	height:92rpx;
+	background:rgba(26,207,193,1);
+	border-radius:50rpx;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	bottom: -260rpx;
+	line-height: 92rpx;
+	text-align: center;
+	font-size:30rpx;
+	font-family:PingFangSC-Regular;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+}
+.next:active{
+	background-color: #07B5A7;
+}
+.regOthers{
+	width: 310rpx;
+	height: 70rpx;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	bottom: -350rpx;
+}
+.LoginReturn{
+	font-size:28rpx;
+	font-family:PingFangSC-Regular;
+	font-weight:400;
+	color:rgba(44,206,221,1);
+	line-height:28rpx;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.getRegCode{
+	font-size:28rpx;
+	font-family:PingFangSC-Regular;
+	font-weight:400;
+	color:rgba(44,206,221,1);
+	line-height:28rpx;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+

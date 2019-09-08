@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+     .header{
+         width: 500px;
+         height: 300px;
+         background-color: skyblue;
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+         top: 20%;
+         transition: 1s;
+         overflow: hidden;
+     }
+     ul{
+        width: 500px;
+         height: 300px;
+         position: relative;
+         transition: 1s;
+         
+     }
+     ul li:nth-child(1) img{
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 1s;
+     }
+     ul li:nth-child(2) img{
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        left: 500px;
+        top: 0;
+        transition: 1s;
+     }
+     ul li:nth-child(3) img{
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        left: 1000px;
+        top: 0;
+        transition: 1s;
+     }
+     .bodyer{
+         width: 200px;
+         height: 30px;
+         /* background-color: pink; */
+         position: absolute;
+         bottom: 10px;
+         left: 50%;
+         margin-left: 50px;
+     }
+     .bodyer span{
+         display: block;
+         width: 50px;
+         height: 30px;
+         background-color: orange;
+         float: left;
+         margin-left: 10px;
+         border-radius: 50%;
+         text-align: center;
+         font-size: 18px;
+         color: white;
+         line-height: 30px;
+         cursor: pointer;
+     }
+    </style>
+</head>
+<body>
+    <div class="header" id="all">
+      <ul>
+          <li><img src="sj.png" alt=""></li>
+          <li><img src="sj2.png" alt=""></li>
+          <li><img src="sj.png" alt=""></li>
+      </ul>
+      <div class="bodyer">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+      </div>
+    </div>
+
+    <script>
+     function my$(id){
+         return document.getElementById(id);
+     }
+     var bannerImg=document.getElementsByTagName('img');
+     var bannerBtn=document.getElementsByTagName('span');
+     var getUl=document.getElementsByTagName('ul');
+     bannerBtn[0].style.backgroundColor="red";
+     getUl[0].style.left="0px";
+     var index=0;
+     for(var i=0;i<bannerBtn.length;i++){
+         bannerBtn[i].setAttribute("index",i);
+         bannerBtn[i].onclick=function(){
+             index=this.getAttribute("index");
+             for(var j=0;j<bannerBtn.length;j++){
+                 bannerBtn[j].style.backgroundColor="orange";
+             }
+             this.style.backgroundColor="red";
+             
+            //  for(var k=0;k<bannerImg.length;k++){
+            //      bannerImg[k].style.left=-500*index+"px";
+            //  }
+            getUl[0].style.left=-500*index+"px";
+         }
+         onload=function(){
+             if(index<bannerImg.length-1){
+                 index++;
+             }else{
+                 index=0;
+             }
+            for(var j=0;j<bannerBtn.length;j++){
+                 bannerBtn[j].style.backgroundColor="orange";
+             }
+             bannerBtn[index].style.backgroundColor="red";
+             getUl[0].style.left=-500*index+"px";
+         }
+        document.getElementById('all').onmouseover=function(){
+            clearInterval(timer)
+        }
+        document.getElementById('all').onmouseout=function(){
+            timer=setInterval(onload,3000);
+        }
+     }
+     var timer=setInterval(onload,3000);
+    </script>
+</body>
+</html>

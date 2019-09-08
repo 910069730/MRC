@@ -1,0 +1,24 @@
+<!-- 放入到index.html中 -->   
+ <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mui/3.7.1/js/mui.min.js'></script>
+    <script>
+            mui.init({
+            keyEventBind: {
+                backbutton: true  //关闭back按键监听
+            }
+        });
+        var mui_old_back = mui.back; 
+var mui_is_switch = 1;
+mui.back = function(){
+    var arr = location.href.split('#');
+    if(arr[1] == '/home' || arr[1] == '/comments' || arr[1] == '/shopcart' || arr[1] == '/talk'){
+        if(mui_is_switch == 1){
+            mui.toast("再按一次退出应用");
+            mui_is_switch = 2;
+        }else{
+            plus.runtime.quit();
+        }   
+    }else{
+        mui_old_back();
+    }
+}
+    </script>
