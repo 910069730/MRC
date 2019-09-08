@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<style>
+            body{
+                margin:0;
+                padding: 0;
+            }
+            .c_lbta{
+                width: 300px;
+                height: 500px;
+                overflow: hidden;
+                position: relative;
+            }
+            .c_lbta .scrollPageBtn{
+                width: 30px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 40%;
+                background-color: #b2b2b2;
+                opacity: 0.2;
+            }
+            .c_lbta  ul{
+                list-style: none;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                position: relative;
+            }
+          .c_lbta  ul li{
+                width: 100%;
+                height: 100%;
+                color: white;
+                font-size: 25px;
+            }
+        </style>
+
+	</head>
+	<body>
+        <div class="banner_group c_lbta" id="bannerall">
+            <ul id="banner">
+                <!-- 缓存末项,实现滑动到最开始后,无限轮播 -->
+                <li style="background-color: chartreuse">第四页</li>
+                <li style="background-color: #f6894d">第一页</li>
+                <li style="background-color: royalblue">第二页</li>
+                <li style="background-color: red">第三页</li>
+                <li style="background-color: chartreuse">第四页</li>
+                <!-- 缓存首项,实现滑动到最后过后,无限轮播 -->
+                <li style="background-color: #f6894d">第一页</li>
+            </ul>
+            <div class="scrollPageBtn" style="z-index: -999">
+                <div style="width: 100%;height: 100%;position: relative;">
+                    <label id="last" style="width:100%;position: absolute;top: 0;text-align: center">↑</label>
+                    <label id="next" style="width:100%;position: absolute;bottom: 0;text-align: center">↓</label>
+                </div>
+            </div>
+        </div>
+        <script>
+            var index = 0; // 保存当前所在项
+            /* 是否允许点击滑动动画,如果正在执行动画的过程中,
+            则禁止点击,如果动画完成后,则允许点击,
+            避免由于连点,出现画面不正常问题. */
+            var allowClick = true; //
+            var timer=setInterval(function(){
+                    $("#next").click()
+                },5000);
+                document.getElementById('bannerall').onmouseover=function(){
+                    clearInterval(timer);
+                    console.log("1");
+                    allowClick = false;
+                }
+                document.getElementById('bannerall').onmouseout=function(){
+                    timer=setInterval(function(){
+                    $("#next").click()
+                },5000);
+                console.log("2");
+                allowClick = true;
+                }
+            // 页面加载完成后调用
+            $(function(){
+                index = 1; // 初始显示第2项
+                /* 注意：第一项是用来缓存末项的,实现无缝连接准备的,所以最开始显示的应该是第2项 */
+                $("#banner").css("bottom", "500px"); // 准备初始显示项
+                // 上一页
+                $("#last").on("click", function(){
+                    if(allowClick){
+                        allowClick = false;
+                        index--; // 上一页,--
+                        // 如果已经到了最开始过后，动画完成后,定位到末项
+                        if(index == 0){
+                            $("#banner").animate({bottom: (index * 500) + 'px'}, "fast", "swing", function () {
+                                index = 4;
+                                $("#banner").css("bottom", "2000px"); // 定位到末项
+                                allowClick = true;
+                            });
+                        }else{
+                            $("#banner").animate({bottom: (index * 500) + 'px'}, "fast", "swing", function () {
+                                allowClick = true;
+                            });
+                        }
+                    }
+                });
+                // 下一页
+                
+                $("#next").on("click", function (){
+                    if(allowClick){
+                        allowClick = false;
+                        if(index <= 5){
+                            index ++; // 下一页++
+                            if(index == 5){
+                                $("#banner").animate({bottom: (index * 500) + 'px'}, "fast", "swing", function () {
+                                    index = 1;
+                                    $("#banner").css("bottom", "500px");
+                                    allowClick = true;
+                                });
+                            }else{
+                                $("#banner").animate({bottom: (index * 500) + 'px'}, "fast", "swing", function () {
+                                    allowClick = true;
+                                });
+                            }
+                        }
+                    }
+                });
+               
+            });
+
+            
+        </script>
+	</body>
+</html>
